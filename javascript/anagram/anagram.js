@@ -36,7 +36,7 @@ Anagram.prototype.matches=function(input, input2, input3) {
           return output;
 }
 Anagram.prototype.isAnagram=function(input){
-  if(this.sortWord(this.word)===this.sortWord(input))
+  if(this.word.toLowerCase().split("").sort().toString()===input.toLowerCase().split("").sort().toString())
   {
     if(this.word.toLowerCase()===input.toLowerCase())
     {
@@ -46,14 +46,5 @@ Anagram.prototype.isAnagram=function(input){
 
   }
   return false;
-}
-Anagram.prototype.sortWord=function(input){
-  var toArray=input.toLowerCase().split("");
-  toArray=toArray.sort();
-  var output="";
-  for(var i=0; i<toArray.length; i++) {
-    output+=toArray[i];
-  }
-  return output;
 }
 module.exports=Anagram;
