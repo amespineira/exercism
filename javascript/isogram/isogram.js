@@ -4,7 +4,6 @@ function Isogram(word){
 Isogram.prototype.isIsogram=function(){
   var toArray=this.removeNonAlphabet(this.word.toLowerCase()).split("");
   var checker={};
-  var isIsogram=true;
   for(var i=0; i<toArray.length; i++)
   {
     if(checker[toArray[i]]==='used')

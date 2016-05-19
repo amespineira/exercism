@@ -4,7 +4,6 @@ function Words() {
 Words.prototype.count = function (input) {
   var noNewLines=this.replaceNewLine(input);
   var toArray=noNewLines.split(" ");
-
   var output={};
   for(var i=0; i<toArray.length; i++) {
     if(toArray[i]!="")
