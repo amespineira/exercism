@@ -144,7 +144,6 @@ describe('Food Chain', function () {
     'I don\'t know why she swallowed the fly. ' +
     'Perhaps she\'ll die.\n\n';
     expected += 'I know an old lady who swallowed a horse.\n' + 'She\'s dead, of course!\n\n';
-    console.log(song.verses(1,8));
     expect(song.verses(1, 8)).toEqual(expected);
   });
 
